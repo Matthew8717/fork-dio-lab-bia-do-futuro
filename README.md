@@ -1,103 +1,82 @@
-# 🎓 Edu - Educador Financeiro Inteligente
+## 💰 MD.Edu - Tesoureiro de Teyvat (Educador de Mora)
+Um agente de IA Generativa inspirado em Genshin Impact que ensina viajantes a gerirem suas Moras e recursos dentro do jogo de forma didática e divertida.
 
-> Agente de IA Generativa que ensina conceitos de finanças pessoais de forma simples e personalizada, usando os próprios dados do cliente como exemplos práticos.
+## 🌟 Por que um agente de Genshin Impact?
+Para este desafio de projeto da DIO, optei por criar um agente fictício voltado ao universo de Genshin Impact em vez de um assistente financeiro real.
 
-## 💡 O Que é o Edu?
+### Os motivos principais são:
 
-O Edu é um educador financeiro que **ensina**, não recomenda. Ele explica conceitos como reserva de emergência, tipos de investimentos e análise de gastos usando uma abordagem didática e exemplos concretos baseados no perfil do cliente.
+1. **Segurança e Privacidade:** Ao lidar com dados de um jogo, eliminamos qualquer risco de exposição de dados bancários reais durante os testes de estudo.
 
-**O que o Edu faz:**
-- ✅ Explica conceitos financeiros de forma simples
-- ✅ Usa dados do cliente como exemplos práticos
-- ✅ Responde dúvidas sobre produtos financeiros
-- ✅ Analisa padrões de gastos de forma educativa
+2. **Criatividade e Engajamento:** Aplicar conceitos de IA (como RAG e System Prompts) em um cenário de entretenimento demonstra a versatilidade da tecnologia.
 
-**O que o Edu NÃO faz:**
-- ❌ Não recomenda investimentos específicos
-- ❌ Não acessa dados bancários sensíveis
-- ❌ Não substitui um profissional certificado
+3. **Foco Educativo:** O objetivo é testar o conhecimento técnico sobre integração de IA e Python, usando a economia do jogo (Mora, Resina, Itens) como uma metáfora perfeita para finanças reais.
 
-## 🏗️ Arquitetura
+## 💡 O Que o MD.Edu Faz?
+O MD.Edu é o seu consultor do Banco do Norte em Liyue. Ele analisa seu "extrato de Teyvat" e te ajuda a não ficar pobre antes do próximo banner.
 
-```mermaid
+- **✅ Analisa Gastos:** Identifica se você está gastando muita Mora com comida ou ascensões desnecessárias.
+
+- **✅ Sugere Farms:** Explica como funcionam as Linhas Ley, Comissões e o Abismo.
+
+- **✅ Linguagem Imersiva:** Responde com gírias e referências ao jogo (Lore-friendly).
+
+- **❌ Não dá dicas de combate:** O foco dele é estritamente financeiro/recursos.
+
+- **❌ Não recomenda gastos reais:** Ele lida apenas com a moeda fictícia do jogo (Mora).
+
+## 🏗️ Arquitetura do Projeto
+Nesta versão, utilizamos a nuvem para processamento, garantindo leveza e rapidez sem necessidade de downloads pesados.
+'''
+Snippet de código
 flowchart TD
-    A[Usuário] --> B[Streamlit]
-    B --> C[Ollama - LLM Local]
-    C --> D[Base de Conhecimento]
+    A[Viajante/Usuário] --> B[Streamlit - Interface]
+    B --> C[Google Gemini 2.0 Flash - IA]
+    C --> D[Base de Dados CSV/JSON - Teyvat]
     D --> C
-    C --> E[Resposta Educativa]
-```
+    C --> E[Resposta do MD.Edu]
+'''
+**Stack Tecnológica:**
 
-**Stack:**
-- Interface: Streamlit
-- LLM: Ollama (modelo local `gpt-oss`)
-- Dados: JSON/CSV mockados
+- **Linguagem:** Python
 
-## 📁 Estrutura do Projeto
+- **Interface:** Streamlit
 
-```
-├── data/                          # Base de conhecimento
-│   ├── perfil_investidor.json     # Perfil do cliente
-│   ├── transacoes.csv             # Histórico financeiro
-│   ├── historico_atendimento.csv  # Interações anteriores
-│   └── produtos_financeiros.json  # Produtos para ensino
+- **Cérebro (LLM):** Google Gemini 2.0 Flash (via API)
+
+- **Dados:** Pandas para manipulação de CSV/JSON mockados
+
+## 📁 Estrutura de Arquivos
+'''
+├── data/                          # Base de conhecimento de Teyvat
+│   ├── perfil_investidor.json     # Perfil do Viajante e Objetivos
+│   ├── transacoes.csv             # Histórico de gastos (Artefatos, Comida, etc)
+│   ├── historico_atendimento.csv  # Conversas passadas
+│   └── produtos_financeiros.json  # Métodos de Farm (Linhas Ley, etc)
 │
-├── docs/                          # Documentação completa
-│   ├── 01-documentacao-agente.md  # Caso de uso e persona
-│   ├── 02-base-conhecimento.md    # Estratégia de dados
-│   ├── 03-prompts.md              # System prompt e exemplos
-│   ├── 04-metricas.md             # Avaliação de qualidade
-│   └── 05-pitch.md                # Apresentação do projeto
-│
-└── src/
-    └── app.py                     # Aplicação Streamlit
-```
-
+├── src/
+│   └── app.py                     # Código principal da aplicação
+└── README.md                      # Você está aqui!
+'''
 ## 🚀 Como Executar
+**1. Obter uma API Key do Gemini**
+O projeto utiliza a API do Google. Você pode gerar uma chave gratuita no Google AI Studio.
 
-### 1. Instalar Ollama
-
-```bash
-# Baixar em: ollama.com
-ollama pull gpt-oss
-ollama serve
-```
-
-### 2. Instalar Dependências
-
-```bash
-pip install streamlit pandas requests
-```
-
-### 3. Rodar o Edu
-
-```bash
+**2. Instalar Dependências**
+'''
+Bash
+pip install streamlit pandas google-generativeai
+'''
+**3. Rodar a Aplicação**
+'''
+Bash
 streamlit run src/app.py
-```
+'''
+## 📝 Exemplo de Interação
+**Usuário:** "Edu, gastei 500k de Mora hoje, estou mal?"
 
-## 🎯 Exemplo de Uso
+**MD.Edu:** "Pelas barbas de Barbatos, Viajante! Vi aqui no seu extrato que você torrou tudo em fortalecimento de artefatos azuis... Isso é um contrato terrível com a sua carteira! Que tal focarmos nas Comissões Diárias amanhã para recuperar esse prejuízo? Contratos devem ser cumpridos!"
 
-**Pergunta:** "O que é CDI?"  
-**Edu:** "CDI é uma taxa de referência usada pelos bancos. Quando um investimento rende '100% do CDI', significa que ele acompanha essa taxa. Hoje o CDI está próximo da Selic. Quer que eu explique a diferença entre os dois?"
-
-**Pergunta:** "Onde estou gastando mais?"  
-**Edu:** "Olhando suas transações de outubro, sua maior despesa é moradia (R$ 1.380), seguida de alimentação (R$ 570). Juntas, representam quase 80% dos seus gastos. Isso é bem comum! Quer que eu explique algumas estratégias de organização?"
-
-## 📊 Métricas de Avaliação
-
-| Métrica | Objetivo |
-|---------|----------|
-| **Assertividade** | O agente responde o que foi perguntado? |
-| **Segurança** | Evita inventar informações (anti-alucinação)? |
-| **Coerência** | A resposta é adequada ao perfil do cliente? |
-
-## 🎬 Diferenciais
-
-- **Personalização:** Usa os dados do próprio cliente nos exemplos
-- **100% Local:** Roda com Ollama, sem enviar dados para APIs externas
-- **Educativo:** Foco em ensinar, não em vender produtos
-- **Seguro:** Estratégias de anti-alucinação documentadas
-
-## 📝 Documentação Completa
-
-Toda a documentação técnica, estratégias de prompt e casos de teste estão disponíveis na pasta [`docs/`](./docs/).
+## 👨‍💻 Desenvolvido por
+Matthew - Gemini (README e como copiloto de código).
+Projeto desenvolvido para a trilha de IA da DIO.

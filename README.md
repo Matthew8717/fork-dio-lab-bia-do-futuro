@@ -27,7 +27,7 @@ O MD.Edu é o seu consultor do Banco do Norte em Liyue. Ele analisa seu "extrato
 
 ## 🏗️ Arquitetura do Projeto
 Nesta versão, utilizamos a nuvem para processamento, garantindo leveza e rapidez sem necessidade de downloads pesados.
-'''
+```
 Snippet de código
 flowchart TD
     A[Viajante/Usuário] --> B[Streamlit - Interface]
@@ -35,7 +35,7 @@ flowchart TD
     C --> D[Base de Dados CSV/JSON - Teyvat]
     D --> C
     C --> E[Resposta do MD.Edu]
-'''
+```
 **Stack Tecnológica:**
 
 - **Linguagem:** Python
@@ -47,7 +47,7 @@ flowchart TD
 - **Dados:** Pandas para manipulação de CSV/JSON mockados
 
 ## 📁 Estrutura de Arquivos
-'''
+```
 ├── data/                          # Base de conhecimento de Teyvat
 │   ├── perfil_investidor.json     # Perfil do Viajante e Objetivos
 │   ├── transacoes.csv             # Histórico de gastos (Artefatos, Comida, etc)
@@ -57,21 +57,21 @@ flowchart TD
 ├── src/
 │   └── app.py                     # Código principal da aplicação
 └── README.md                      # Você está aqui!
-'''
+```
 ## 🚀 Como Executar
 **1. Obter uma API Key do Gemini**
 O projeto utiliza a API do Google. Você pode gerar uma chave gratuita no Google AI Studio.
 
 **2. Instalar Dependências**
-'''
+```
 Bash
 pip install streamlit pandas google-generativeai
-'''
+```
 **3. Rodar a Aplicação**
-'''
+```
 Bash
 streamlit run src/app.py
-'''
+```
 ## 📝 Exemplo de Interação
 **Usuário:** "Edu, gastei 500k de Mora hoje, estou mal?"
 
@@ -79,4 +79,5 @@ streamlit run src/app.py
 
 ## 👨‍💻 Desenvolvido por
 Matthew - Gemini (README e como copiloto de código).
+
 Projeto desenvolvido para a trilha de IA da DIO.

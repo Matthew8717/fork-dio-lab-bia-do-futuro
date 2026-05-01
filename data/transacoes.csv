@@ -1,11 +1,8 @@
 data,descricao,categoria,valor,tipo
-2025-10-01,Salário,receita,5000.00,entrada
-2025-10-02,Aluguel,moradia,1200.00,saida
-2025-10-03,Supermercado,alimentacao,450.00,saida
-2025-10-05,Netflix,lazer,55.90,saida
-2025-10-07,Farmácia,saude,89.00,saida
-2025-10-10,Restaurante,alimentacao,120.00,saida
-2025-10-12,Uber,transporte,45.00,saida
-2025-10-15,Conta de Luz,moradia,180.00,saida
-2025-10-20,Academia,saude,99.00,saida
-2025-10-25,Combustível,transporte,250.00,saida
+2025-10-01,Recompensa do Abismo,receita,600000.00,entrada
+2025-10-02,Fortalecimento de Artefato,ascensao,150000.00,saida
+2025-10-03,Restaurante Wanmin (Comida),alimentacao,25000.00,saida
+2025-10-05,Passe de Batalha (Gnostic),lazer,120000.00,saida
+2025-10-07,Ferreiro (Refinamento),armas,89000.00,saida
+2025-10-10,Ingredientes com a Sara,alimentacao,12000.00,saida
+2025-10-15,Ascensão de Personagem (Lvl 80),progresso,250000.00,saida

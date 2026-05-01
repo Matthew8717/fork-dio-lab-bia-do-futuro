@@ -8,28 +8,28 @@
 | Tempo | Seção | O que falar |
 |-------|-------|-------------|
 | 0:00 - 0:30 | Problema | A dor que você resolve |
-| 0:30 - 1:30 | Solução | Como o Edu resolve |
+| 0:30 - 1:30 | Solução | Como o MD.Edu resolve |
 | 1:30 - 2:30 | Demo | Mostre funcionando |
 | 2:30 - 3:00 | Diferencial | Por que é inovador |
 
 ---
  
-## Roteiro do Edu
+## Roteiro do MD.Edu
 
 ### 🎯 Problema (30 seg)
 > "62% dos brasileiros não sabem o que é reserva de emergência. Muita gente quer aprender sobre finanças, mas não sabe por onde começar — e tem medo de parecer burro perguntando."
 
 ### 💡 Solução (60 seg)
-> "O Edu é um educador financeiro que ensina de forma personalizada. Ele usa seus próprios dados para dar exemplos práticos. Não recomenda investimentos — só educa. É como ter um professor particular de finanças disponível 24h."
+> "O MD.Edu é um educador financeiro que ensina de forma personalizada. Ele usa seus próprios dados para dar exemplos práticos. Não recomenda investimentos — só educa. É como ter um professor particular de finanças disponível 24h."
 
 ### 📱 Demo (60 seg)
-> [Compartilhe a tela e faça 2-3 perguntas ao Edu]
+> [Compartilhe a tela e faça 2-3 perguntas ao MD.Edu]
 > - "O que é CDI?"
 > - "Onde estou gastando mais?"
 > - "Me explica o que é Tesouro Selic"
 
 ### ✨ Diferencial (30 seg)
-> "Diferente de chatbots genéricos, o Edu usa SEUS dados como exemplo. Isso torna o aprendizado concreto. E o melhor: roda 100% local, sem custo e sem enviar seus dados pra ninguém."
+> "Diferente de chatbots genéricos, o MD.Edu usa SEUS dados como exemplo. Isso torna o aprendizado concreto. E o melhor: roda 100% local, sem custo e sem enviar seus dados pra ninguém."
 
 ---
 

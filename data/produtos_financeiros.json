@@ -1,42 +1,34 @@
 [
   {
-    "nome": "Tesouro Selic",
-    "categoria": "renda_fixa",
-    "risco": "baixo",
-    "rentabilidade": "100% da Selic",
-    "aporte_minimo": 30.00,
-    "indicado_para": "Reserva de emergência e iniciantes"
+    "nome": "Comissões Diárias",
+    "categoria": "renda_fixa_teyvat",
+    "risco": "zero",
+    "rentabilidade": "Mora Garantida + Gemas",
+    "esforço_minimo": "10 min",
+    "indicado_para": "Todo viajante que quer o básico garantido"
   },
   {
-    "nome": "CDB Liquidez Diária",
-    "categoria": "renda_fixa",
+    "nome": "Linha Ley (Flor da Riqueza)",
+    "categoria": "investimento_resina",
     "risco": "baixo",
-    "rentabilidade": "102% do CDI",
-    "aporte_minimo": 100.00,
-    "indicado_para": "Quem busca segurança com rendimento diário"
+    "rentabilidade": "60.000 Mora por 20 Resinas",
+    "esforço_minimo": "Gasto de Resina",
+    "indicado_para": "Quem precisa de liquidez imediata para subir personagens"
   },
   {
-    "nome": "LCI/LCA",
-    "categoria": "renda_fixa",
-    "risco": "baixo",
-    "rentabilidade": "95% do CDI",
-    "aporte_minimo": 1000.00,
-    "indicado_para": "Quem pode esperar 90 dias (isento de IR)"
-  },
-  {
-    "nome": "Fundo Imobiliário (FII)",
-    "categoria": "fundo",
+    "nome": "Contratos de Recompensa (Bounties)",
+    "categoria": "reputacao",
     "risco": "medio",
-    "rentabilidade": "Dividend Yield (DY) costuma ficar entre 6% a 12% ao ano",
-    "aporte_minimo": 100.00,
-    "indicado_para": "Perfil moderado que busca diversificação e renda recorrente mensal"
+    "rentabilidade": "Alta (Mora + XP Reputação)",
+    "esforço_minimo": "Caça a monstros elite",
+    "indicado_para": "Viajantes que já possuem um time sólido"
   },
   {
-    "nome": "Fundo de Ações",
-    "categoria": "fundo",
+    "nome": "Espiral do Abismo",
+    "categoria": "alto_risco",
     "risco": "alto",
-    "rentabilidade": "Variável",
-    "aporte_minimo": 100.00,
-    "indicado_para": "Perfil arrojado com foco no longo prazo"
+    "rentabilidade": "Massiva (Mora, Gemas e Artefatos)",
+    "esforço_minimo": "Combate de elite",
+    "indicado_para": "Veteranos buscando maximizar patrimônio"
   }
 ]

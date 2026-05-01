@@ -3,13 +3,12 @@
 > [!TIP]
 > **Prompt usado para esta etapa:**
 > 
-> Organize a base de conhecimento do agente "Edu" usando os 4 arquivos da pasta `data/` (em anexo). Explique pra que serve cada arquivo e monte um exemplo de contexto formatado que será enviado pro LLM. Preencha o template abaixo.
+> Organize a base de conhecimento do agente "MD.Edu" usando os 4 arquivos da pasta `data/` (em anexo). Explique pra que serve cada arquivo e monte um exemplo de contexto formatado que será enviado pro LLM. Preencha o template abaixo.
 >
-> [cole ou anexe o template `02-base-conhecimento.md` pra contexto]
 
 ## Dados Utilizados
 
-| Arquivo | Formato | Para que serve no Edu? |
+| Arquivo | Formato | Para que serve no MD.Edu? |
 |---------|---------|---------------------|
 | `historico_atendimento.csv` | CSV | Contextualizar interações anteriores, ou seja, dar continuidade ao atendimento de forma mais eficiente. |
 | `perfil_investidor.json` | JSON | Personalizar as explicações sobre as dúvidas e necessidades de aprendizado do cliente. |
@@ -22,57 +21,10 @@
 
 > Você modificou ou expandiu os dados mockados? Descreva aqui.
 
-O produto Fundo Imobiliário (FII) substituiu o Fundo Multimercado, pois pessoalmente me sinto mais confiante em usar apenas produtos financeiros que eu conheço. Assim, poderei validar as respostas do Edu de forma mais assertiva.
+Inves de investimento real, decidi criar um agente para investimento de uma moeda fictícia dentro de Genshin Impact! Porque ganhar mais Mora é sempre bom.
 
 ---
 
-## Estratégia de Integração
-
-### Como os dados são carregados?
-> Descreva como seu agente acessa a base de conhecimento.
-
-Existem duas possibilidades, injetar os dados diretamente no prompt (Ctrl + C, Ctrl + V) ou carregar os arquivos via código, como no exemplo abaixo:
-
-```python
-import pandas as pd
-import json
-
-perfil = json.load(open('./data/perfil_investidor.json'))
-transacoes = pd.read_csv('./data/transacoes.csv')
-historico = pd.read_csv('./data/historico_atendimento.csv')
-produtos = json.load(open('./data/produtos_financeiros.json'))
-```
-
-### Como os dados são usados no prompt?
-> Os dados vão no system prompt? São consultados dinamicamente?
-
-Para simplificar, podemos simplesmente "injetar" os dados em nosso prompt, agarntindo que o Agente tenha o melhor contexto possível. Lembrando que, em soluções mais robustas, o ideal é que essas informaçoes sejam carregadas dinamicamente para que possamos ganhar flexibilidade.
-
-```text
-DADOS DO CLIENTE E PERFIL (data/perfil_investidor.json):
-{
-  "nome": "João Silva",
-  "idade": 32,
-  "profissao": "Analista de Sistemas",
-  "renda_mensal": 5000.00,
-  "perfil_investidor": "moderado",
-  "objetivo_principal": "Construir reserva de emergência",
-  "patrimonio_total": 15000.00,
-  "reserva_emergencia_atual": 10000.00,
-  "aceita_risco": false,
-  "metas": [
-    {
-      "meta": "Completar reserva de emergência",
-      "valor_necessario": 15000.00,
-      "prazo": "2026-06"
-    },
-    {
-      "meta": "Entrada do apartamento",
-      "valor_necessario": 50000.00,
-      "prazo": "2027-12"
-    }
-  ]
-}
 
 TRANSACOES DO CLIENTE (data/transacoes.csv):
 data,descricao,categoria,valor,tipo
@@ -152,21 +104,20 @@ O exemplo de contexto montado abaixo, se baiseia nos dados originais da base de 
 DADOS DO CLIENTE:
 - Nome: João Silva
 - Perfil: Moderado
-- Objetivo: Construir reserva de emergência
-- Reserva atual: R$ 10.000 (meta: R$ 15.000)
+- Objetivo: Levar a Skirk para Lvl 90
+- Reserva atual: Mora 100.000 (meta: Mora 150.000)
 
 RESUMO DE GASTOS:
-- Moradia: R$ 1.380
-- Alimentação: R$ 570
-- Transporte: R$ 295
-- Saúde: R$ 188
-- Lazer: R$ 55,90
-- Total de saídas: R$ 2.488,90
+- Compras do dia a dia dentro do jogo: Mora 1.380
+- Alimentação no restaurante da Xiangling: Mora 570
+- Saúde (comprando comidas que curam): Mora 188
+- Lazer (comprando itens aleatorios dentro do jogo): Mora 55,90
+- Total de saídas: Mora 2.488,90
 
 PRODUTOS DISPONÍVEIS PARA EXPLICAR:
-- Tesouro Selic (risco baixo)
-- CDB Liquidez Diária (risco baixo)
-- LCI/LCA (risco baixo)
-- Fundo Imobiliário - FII (risco médio)
-- Fundo de Ações (risco alto)
+- Ley Lines (risco alto)
+- Abismo (risco alto)
+- Teatro (risco médio)
+- Comissões Diárias (risco baixo)
+- Códigos (risco zero)
 ```

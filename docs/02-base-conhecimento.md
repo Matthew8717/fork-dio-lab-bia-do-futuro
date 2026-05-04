@@ -23,6 +23,8 @@
 
 Inves de investimento real, decidi criar um agente para investimento de uma moeda fictícia dentro de Genshin Impact! Porque ganhar mais Mora é sempre bom.
 
+### Como os dados são usados no prompt?
+
 ```text
 DADOS E PERFIL DO CLIENTE (data/perfil_investidor.json):
 {

@@ -23,21 +23,42 @@
 
 Inves de investimento real, decidi criar um agente para investimento de uma moeda fictícia dentro de Genshin Impact! Porque ganhar mais Mora é sempre bom.
 
----
-
+```text
+DADOS E PERFIL DO CLIENTE (data/perfil_investidor.json):
+{
+  "nome": "Lucas Genshin Silva",
+  "idade": 6,
+  "profissao": "Game Designer",
+  "renda_mensal": 5000.00,
+  "perfil_investidor": "Moderado",
+  "objetivo_principal": "Intercâmbio no Canadá em 2026",
+  "patrimonio_total": 45000.00,
+  "reserva_emergencia_atual": 12000.00,
+  "aceita_risco": false,
+  "metas": [
+    {
+      "meta": "Completar reserva de emergência",
+      "valor_necessario": 15000.00,
+      "prazo": "2026-06"
+    },
+    {
+      "meta": "Entrada do apartamento",
+      "valor_necessario": 50000.00,
+      "prazo": "2027-12"
+    }
+  ]
+}
 
 TRANSACOES DO CLIENTE (data/transacoes.csv):
 data,descricao,categoria,valor,tipo
-2025-10-01,Salário,receita,5000.00,entrada
-2025-10-02,Aluguel,moradia,1200.00,saida
-2025-10-03,Supermercado,alimentacao,450.00,saida
-2025-10-05,Netflix,lazer,55.90,saida
-2025-10-07,Farmácia,saude,89.00,saida
-2025-10-10,Restaurante,alimentacao,120.00,saida
-2025-10-12,Uber,transporte,45.00,saida
-2025-10-15,Conta de Luz,moradia,180.00,saida
-2025-10-20,Academia,saude,99.00,saida
-2025-10-25,Combustível,transporte,250.00,saida
+2025-10-01,Recompensa do Abismo,receita,600000.00,entrada
+2025-10-02,Fortalecimento de Artefato,ascensao,150000.00,saida
+2025-10-03,Restaurante Wanmin (Comida),alimentacao,25000.00,saida
+2025-10-05,Passe de Batalha (Gnostic),lazer,120000.00,saida
+2025-10-07,Ferreiro (Refinamento),armas,89000.00,saida
+2025-10-10,Ingredientes com a Sara,alimentacao,12000.00,saida
+2025-10-15,Ascensão de Personagem (Lvl 80),progresso,250000.00,saida
+2025-10-15,Melhorando 50 Armas 1 Estrelas que não vai usar(Lvl 70),progresso,800000.00,saida
 
 HISTORICO DE ATENDIMENTO DO CLIENTE (data/historico_atendimento.csv):
 data,canal,tema,resumo,resolvido
@@ -46,48 +67,45 @@ data,canal,tema,resumo,resolvido
 2025-10-01,chat,Tesouro Selic,Cliente pediu explicação sobre o funcionamento do Tesouro Direto,sim
 2025-10-12,chat,Metas financeiras,Cliente acompanhou o progresso da reserva de emergência,sim
 2025-10-25,email,Atualização cadastral,Cliente atualizou e-mail e telefone,sim
+2025-10-15,chat,Cartão Internacional,Dúvida sobre taxas de IOF para viagem,sim
+2025-10-22,chat,Criptoativos,Pediu explicação sobre ETF de Bitcoin,sim
+2025-11-01,email,Seguro Viagem,Solicitou cotação para cobertura na América do Norte,sim
+2025-11-05,chat,Reserva,Verificou quanto falta para a meta de intercâmbio,sim
+2025-11-10,telefone,Aumento de limite,Solicitação aprovada para gastos na viagem,sim
 
 PRODUTOS DISPONIVEIS PARA ENSINO (data/produtos_financeiros.json):
 [
   {
-    "nome": "Tesouro Selic",
-    "categoria": "renda_fixa",
-    "risco": "baixo",
-    "rentabilidade": "100% da Selic",
-    "aporte_minimo": 30.00,
-    "indicado_para": "Reserva de emergência e iniciantes"
+    "nome": "Comissões Diárias",
+    "categoria": "renda_fixa_teyvat",
+    "risco": "zero",
+    "rentabilidade": "Mora Garantida + Gemas",
+    "esforço_minimo": "10 min",
+    "indicado_para": "Todo viajante que quer o básico garantido"
   },
   {
-    "nome": "CDB Liquidez Diária",
-    "categoria": "renda_fixa",
+    "nome": "Linha Ley (Flor da Riqueza)",
+    "categoria": "investimento_resina",
     "risco": "baixo",
-    "rentabilidade": "102% do CDI",
-    "aporte_minimo": 100.00,
-    "indicado_para": "Quem busca segurança com rendimento diário"
+    "rentabilidade": "60.000 Mora por 20 Resinas",
+    "esforço_minimo": "Gasto de Resina",
+    "indicado_para": "Quem precisa de liquidez imediata para subir personagens"
   },
   {
-    "nome": "LCI/LCA",
-    "categoria": "renda_fixa",
-    "risco": "baixo",
-    "rentabilidade": "95% do CDI",
-    "aporte_minimo": 1000.00,
-    "indicado_para": "Quem pode esperar 90 dias (isento de IR)"
-  },
-  {
-    "nome": "Fundo Imobiliário (FII)",
-    "categoria": "fundo",
+    "nome": "Contratos de Recompensa (Bounties)",
+    "categoria": "reputacao",
     "risco": "medio",
-    "rentabilidade": "Dividend Yield (DY) costuma ficar entre 6% a 12% ao ano",
-    "aporte_minimo": 100.00,
-    "indicado_para": "Perfil moderado que busca diversificação e renda recorrente mensal"
+    "rentabilidade": "Alta (Mora + XP Reputação)",
+    "esforço_minimo": "Caça a monstros elite",
+    "indicado_para": "Viajantes que já possuem um time sólido"
   },
   {
-    "nome": "Fundo de Ações",
-    "categoria": "fundo",
+    "nome": "Espiral do Abismo",
+    "categoria": "alto_risco",
     "risco": "alto",
-    "rentabilidade": "Variável",
-    "aporte_minimo": 100.00,
-    "indicado_para": "Perfil arrojado com foco no longo prazo"
+    "rentabilidade": "Massiva (Mora, Gemas e Artefatos)",
+    "esforço_minimo": "Combate de elite",
+    "indicado_para": "Veteranos buscando maximizar patrimônio"
   }
 ]
 ```
